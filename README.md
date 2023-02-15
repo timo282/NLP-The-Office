@@ -1,6 +1,6 @@
 # NLP-The-Office
 
-![status](https://img.shields.io/badge/Status-planning-yellow)
+![status](https://img.shields.io/badge/Status-implementing-yellow)
 
 Repository for exam in lecture "Intelligent Text Analysis" at DHBW Ravensburg. Various traditional and modern NLP approaches are used to analyse a dataset with scenes from the US TV-show "The Office".
 

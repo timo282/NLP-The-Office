@@ -98,6 +98,9 @@ def preprocess(
     # remove deleted scenes from script
     df = df[df["deleted"] == False]
     df = df.drop(columns=["deleted"])
+
+    # add "episode id" which is season+episode
+    df["season_episode"] = df.apply(lambda x: f"{x['season']}{'0' if x['episode']<10 else ''}{x['episode']}", axis=1)
     
     if (concat_scenes):
         df = concatenate_scenes(df)

@@ -20,7 +20,14 @@ df = pd.read_csv(PATH+FILE, sep=",", index_col="id")
 
 # concatenate line_text for each scene
 def concatenate_scenes(df):
-    df = df.groupby(["season", "episode", "scene"])["line_text"].apply(lambda x: " ".join(x)).reset_index()
+    if "directionals" in df.columns:
+        df["directionals"] = df["directionals"].fillna("")
+
+    df["line_text"] = df["speaker"] + ": " + df["line_text"]
+    df = df.drop(columns=["speaker"])
+    df = df.groupby(["season", "episode", "scene"]).agg(lambda x: " ".join(x)).reset_index()
+
+    df["season_episode"] = df.apply(lambda x: f"{x['season']}{'0' if x['episode']<10 else ''}{x['episode']}", axis=1)
     return df
 
 def extract_directorals(df):
@@ -92,6 +99,7 @@ def preprocess(
         lwr=False, 
         exp_contractions=False, 
         conversion:str=None,
+        normalize:str=None,
         tokenizer=(None, False) # parameter for tokenize function (tokenizer(string), tokenize_specialwords(bool)), only used if conversion is "tokenize"
         )->pd.DataFrame:
     
@@ -116,12 +124,13 @@ def preprocess(
     if (rmv_stopwords):
         df['line_text'] = remove_stopwords(df) 
 
+    if (normalize == "lemmatize"):
+        df['line_text'] = lemmatize(df)
+    elif (normalize == "stem"):
+        df['line_text'] = stem(df)   
+
     if (conversion == "tokenize"):
         df['line_text']  = tokenize(df, tokenizer[0], tokenizer[1])
-    elif (conversion == "lemmatize"):
-        df['line_text'] = lemmatize(df)
-    elif (conversion == "stem"):
-        df['line_text'] = stem(df)
     elif (conversion == "pos_tag"):
         df['line_text'] = pos_tag(df)
 

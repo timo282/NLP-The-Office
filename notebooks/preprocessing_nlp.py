@@ -102,19 +102,19 @@ def preprocess(
     # add "episode id" which is season+episode
     df["season_episode"] = df.apply(lambda x: f"{x['season']}{'0' if x['episode']<10 else ''}{x['episode']}", axis=1)
     
-    if (concat_scenes):
-        df = concatenate_scenes(df)
     if (extract_direc):
         df = extract_directorals(df)
+    if (concat_scenes):
+        df = concatenate_scenes(df)
 
+    if (exp_contractions):
+        df['line_text'] = expanding_contractions(df)  
     if (remove_punct):
         df['line_text'] = remove_punctuation(df)
     if (lwr):
         df['line_text'] = lower(df)
     if (rmv_stopwords):
-        df['line_text'] = remove_stopwords(df)
-    if (exp_contractions):
-        df['line_text'] = expanding_contractions(df)   
+        df['line_text'] = remove_stopwords(df) 
 
     if (conversion == "tokenize"):
         df['line_text']  = tokenize(df, tokenizer[0], tokenizer[1])

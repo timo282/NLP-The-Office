@@ -16,8 +16,6 @@ from sklearn.feature_extraction.text import HashingVectorizer
 PATH = "../data/"
 FILE = "the-office-lines_scripts.csv"
 
-df = pd.read_csv(PATH+FILE, sep=",", index_col="id")
-
 # concatenate line_text for each scene
 def concatenate_scenes(df):
     if "directionals" in df.columns:
@@ -51,7 +49,7 @@ def remove_stopwords(df):
 def expanding_contractions(df):
     return df["line_text"].apply(lambda x: contractions.fix(x))
 
-def tokenize(df, tokenizer="TreeBankWord", tokenize_specialwords=True):
+def tokenize(df, tokenizer="TreeBankWord", tokenize_specialwords=True, names_csv=PATH+"character_names.csv", compound_words_txt=PATH+"compound_words_the-office_by_chatgpt.txt"):
     if tokenizer=="TreeBankWord":
         t = nltk.tokenize.TreebankWordTokenizer()
     elif tokenizer=="WordPunct":
@@ -64,10 +62,10 @@ def tokenize(df, tokenizer="TreeBankWord", tokenize_specialwords=True):
     tmp = df["line_text"].apply(lambda x: t.tokenize(x))
 
     if tokenize_specialwords:
-        names = pd.read_csv(PATH+"character_names.csv", sep=";", encoding='cp1252').Character.values
+        names = pd.read_csv(names_csv, sep=";", encoding='cp1252').Character.values
         names = names.tolist()
         names.extend([name.lower() for name in names])
-        with open(PATH+"compound_words_the-office_by_chatgpt.txt", "r") as f:
+        with open(compound_words_txt, "r") as f:
             compound_words = f.read().split(",")
         compound_words = [word.strip() for word in compound_words]
         compound_words.extend([w.lower() for w in compound_words])
@@ -100,7 +98,7 @@ def preprocess(
         exp_contractions=False, 
         conversion:str=None,
         normalize:str=None,
-        tokenizer=(None, False) # parameter for tokenize function (tokenizer(string), tokenize_specialwords(bool)), only used if conversion is "tokenize"
+        tokenizer=(None, False, PATH+"character_names.csv", PATH+"compound_words_the-office_by_chatgpt.txt") # parameter for tokenize function (tokenizer(string), tokenize_specialwords(bool)), only used if conversion is "tokenize"
         )->pd.DataFrame:
     
     # remove deleted scenes from script
@@ -130,7 +128,7 @@ def preprocess(
         df['line_text'] = stem(df)   
 
     if (conversion == "tokenize"):
-        df['line_text']  = tokenize(df, tokenizer[0], tokenizer[1])
+        df['line_text']  = tokenize(df, tokenizer[0], tokenizer[1], names_csv=tokenizer[2], compound_words_txt=tokenizer[3])
     elif (conversion == "pos_tag"):
         df['line_text'] = pos_tag(df)
 

@@ -6,6 +6,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, MWETokenizer
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
+from nltk.tag import BrillTaggerTrainer, UnigramTagger, brill, brill_trainer
 import contractions
 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -86,7 +87,9 @@ def stem(df):
 
 # tagging
 def pos_tag(df):
-    return df["line_text"].apply(lambda x: nltk.pos_tag(word_tokenize(x)))
+    return df["line_text"].apply(lambda x: nltk.pos_tag(nltk.tokenize.TreebankWordTokenizer().tokenize(x)))
+
+
 
 def preprocess(
         df, 
@@ -131,7 +134,6 @@ def preprocess(
         df['line_text']  = tokenize(df, tokenizer[0], tokenizer[1], names_csv=tokenizer[2], compound_words_txt=tokenizer[3])
     elif (conversion == "pos_tag"):
         df['line_text'] = pos_tag(df)
-
 
     return df
 

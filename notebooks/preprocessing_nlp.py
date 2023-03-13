@@ -22,7 +22,7 @@ def concatenate_scenes(df):
     if "directionals" in df.columns:
         df["directionals"] = df["directionals"].fillna("")
 
-    df["line_text"] = df["speaker"] + ": " + df["line_text"]
+    df["line_text"] = "[" + df["speaker"] + "]: " + df["line_text"]
     df = df.drop(columns=["speaker"])
     df = df.groupby(["season", "episode", "scene"]).agg(lambda x: " ".join(x)).reset_index()
 

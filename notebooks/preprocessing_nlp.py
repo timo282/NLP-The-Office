@@ -19,8 +19,8 @@ FILE = "the-office-lines_scripts.csv"
 
 # concatenate line_text for each scene
 def concatenate_scenes(df):
-    if "directionals" in df.columns:
-        df["directionals"] = df["directionals"].fillna("")
+    if "directorials" in df.columns:
+        df["directorials"] = df["directorials"].fillna("")
 
     df["line_text"] = "[" + df["speaker"] + "]: " + df["line_text"]
     df = df.drop(columns=["speaker"])
@@ -30,8 +30,8 @@ def concatenate_scenes(df):
     return df
 
 def extract_directorals(df):
-    # extract text from line_text in square brackets, put it in new column called "directionals", multiple square brackets will be extracted as a list
-    df["directionals"] = df["line_text"].str.extractall(r"\[(.*?)\]").unstack().apply(lambda x: ", ".join(x.dropna()), axis=1)
+    # extract text from line_text in square brackets, put it in new column called "directorials", multiple square brackets will be extracted as a list
+    df["directorials"] = df["line_text"].str.extractall(r"\[(.*?)\]").unstack().apply(lambda x: ", ".join(x.dropna()), axis=1)
     # delete the extracted text from line_text
     df["line_text"] = df["line_text"].str.replace(r"\[(.*?)\]", "", regex=True).str.strip()
     return df

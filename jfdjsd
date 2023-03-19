@@ -1,0 +1,220 @@
+[33mcommit 993ca713756943a1746488acf3d40fdde0d27ddc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Wed Feb 22 23:45:07 2023 +0100
+
+    Improve network analysis
+
+[33mcommit ffea18ff28573be647e5a5dce7bf3ed16244c803[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Wed Feb 22 11:53:24 2023 +0100
+
+    Addon
+
+[33mcommit fc7da540504a77ae92a1a0d98400a2b14fccee3b[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Wed Feb 22 11:52:53 2023 +0100
+
+    Add network analysis
+
+[33mcommit 8ba1c22c34594ce4f37cfa291119eb39608d45cc[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Wed Feb 22 11:35:04 2023 +0100
+
+    Improve preprocessing, Add further nlp analysis (dispersion, concordance, ngrams, sentiment)
+
+[33mcommit 90a520514f5d60dc32e27049e8ab4895f2ad6115[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Wed Feb 22 08:23:04 2023 +0100
+
+    Add plots to nlp analysis
+
+[33mcommit 738efdcb3beaa602d3a8403b0d66a7bef7919fa4[m
+Merge: e0d4b27 90658e7
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 17:42:47 2023 +0100
+
+    Merge branch 'main' of https://github.com/timo282/NLP-The-Office
+
+[33mcommit e0d4b27f3c5e872bd7c355fac26b82f7e057965a[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 17:42:33 2023 +0100
+
+    Add graphics for nlp analysis
+
+[33mcommit 90658e745c11fb9e54b14f2c89a8c094a8108442[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Tue Feb 21 17:33:32 2023 +0100
+
+    Add utils to search for specific words
+
+[33mcommit ebc23af8793ee713acaaa3f929cd2ce2b273d268[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 16:18:01 2023 +0100
+
+    Outsource preprocessing functions
+
+[33mcommit 4185432a2d848a1ac48215430423500f42e33ec1[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 15:50:42 2023 +0100
+
+    Revise exploratory analysis
+
+[33mcommit 45f6edb5ac311b63a887d8d21c43c64b91f4002f[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 14:47:52 2023 +0100
+
+    Update tokenization with special words and names
+
+[33mcommit f27d609cb73ddaf336467bc418d53c50b4399b1b[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 12:09:32 2023 +0100
+
+    Rename csv
+
+[33mcommit 642e247c8d56df5f6fee2312a959892e45024b8a[m
+Merge: df3459a d31beb2
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 11:46:55 2023 +0100
+
+    Merge branch 'main' of https://github.com/timo282/NLP-The-Office
+
+[33mcommit df3459a6618a9e50b7992546292190494013c717[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 21 11:46:50 2023 +0100
+
+    Move print function to utils
+
+[33mcommit d31beb2188a2257394be04545369f6bd332394b0[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Mon Feb 20 20:38:02 2023 +0100
+
+    Restructure exploration
+
+[33mcommit 1e14695c5ff1df58dd113b2245659654025eb26b[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Fri Feb 17 23:54:22 2023 +0100
+
+    Fix preprocessing functions
+
+[33mcommit e9596419af95695951970097a33dbd93279fb3de[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Thu Feb 16 23:46:21 2023 +0100
+
+    Implement basic NLP preprocessing methods
+
+[33mcommit 74b26c66b889e43dc701970545ed8b8e077c3b96[m
+Author: Moritz Schlager <87517800+mo374z@users.noreply.github.com>
+Date:   Wed Feb 15 23:28:41 2023 +0100
+
+    Update README.md
+
+[33mcommit 3184b4159a722e3b16ecb384bebb557617966509[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Wed Feb 15 23:27:22 2023 +0100
+
+    Reorganized data exploration in new file
+
+[33mcommit 4fe160715a57851e5f627ca49abe0138d28ba572[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Wed Feb 15 22:05:41 2023 +0100
+
+    Add new notebooks, modify old notebooks and revise data
+
+[33mcommit 4a7c1287d5edde429e6747ae4cdd0fc376f55a6b[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Tue Feb 14 23:34:31 2023 +0100
+
+    Revise function to print episode
+
+[33mcommit 80f72ec00f6d130a6e058e55874d4b80360e5ffd[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Sun Feb 12 23:02:18 2023 +0100
+
+    Add analysis of missing episodes
+
+[33mcommit 57e6d4ed3a70c3a3bc76d3f8a465b9fb6ffee16c[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Sun Feb 12 11:41:52 2023 +0100
+
+    add analysis of all scenes through social networks
+
+[33mcommit d2280c87bd259e66dc1082a4821b1c89dd0e52aa[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Sun Feb 12 00:54:54 2023 +0100
+
+    add unmodified data and network graph impl start
+
+[33mcommit b333e3d5bac0600c82747f4674ec4d2c9d666222[m
+Author: Moritz Schlager <87517800+mo374z@users.noreply.github.com>
+Date:   Thu Feb 2 18:55:32 2023 +0100
+
+    Update README.md
+
+[33mcommit 52119164e57826521429f83a592955d71db8a6f0[m
+Merge: 8063b92 88636ac
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Mon Jan 30 18:44:33 2023 +0100
+
+    Merge branch 'main' of https://github.com/timo282/NLP-The-Office
+
+[33mcommit 88636ac6f458a7156e48b35cb3b57f1c56b07f00[m
+Merge: 2183fa7 d3c19b5
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Mon Jan 30 18:44:31 2023 +0100
+
+    Merge branch 'main' of github.com:timo282/NLP-The-Office
+
+[33mcommit 8063b9264e95d73a6bbc575f29671c6492740758[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Mon Jan 30 18:44:29 2023 +0100
+
+    Adds deleted scenes graph
+
+[33mcommit 2183fa7e843d53363f2f3b5b4ee4734a94221273[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Mon Jan 30 18:44:24 2023 +0100
+
+    error correction
+
+[33mcommit d3c19b56d3ddc5ae7cd02965ef66938444306fc8[m
+Merge: 7cce4eb 5eb03c2
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Sat Jan 28 22:34:35 2023 +0100
+
+    Merge branch 'main' of https://github.com/timo282/NLP-The-Office
+
+[33mcommit 7cce4eb0b663d9942cd03792a2bd778f994526a2[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Sat Jan 28 22:34:32 2023 +0100
+
+    Adds some exploration graphics
+
+[33mcommit 5eb03c22e767865b05e59bd21756715a55c82404[m
+Author: mo374z <schlager.mo@t-online.de>
+Date:   Sat Jan 28 22:07:20 2023 +0100
+
+    some low level nlp analysis
+
+[33mcommit 0115a9e64f9fd5b5fe7730da834619e0eb8ead70[m
+Author: timo282 <ti-heiss@t-online.de>
+Date:   Fri Jan 27 18:07:01 2023 +0100
+
+    Adds dataset and exploration notebook
+
+[33mcommit cb7c69528f6a2a74fe603e7dfcd0f38f710feb4b[m
+Author: Timo Heiß <87521684+timo282@users.noreply.github.com>
+Date:   Fri Jan 27 17:17:20 2023 +0100
+
+    Update README.md
+
+[33mcommit d9dbe0d5dab772f19f3e1632cd803ca27d99f7aa[m
+Author: Timo Heiß <87521684+timo282@users.noreply.github.com>
+Date:   Fri Jan 27 17:17:09 2023 +0100
+
+    Update README.md
+
+[33mcommit e8547fba0dbf09d6004a7372e15ea4efb78d219a[m
+Author: Timo Heiß <87521684+timo282@users.noreply.github.com>
+Date:   Fri Jan 27 17:15:20 2023 +0100
+
+    Initial commit

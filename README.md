@@ -11,8 +11,9 @@ the show.
 This repository also contiains scripts to train models to generate scenes (such as the scene above) and to classify
 the speaker of a line. 
 
-### To come
-We plan to upload the fine-tuned models to HuggingFace to make them easy accessible for everyone.
+### To come...
+We plan to upload the fine-tuned models to HuggingFace to make them easy accessible for everyone.#
+
 ![delivery_status](https://img.shields.io/badge/DeliveryStatus-implementing-yellow)
 
 

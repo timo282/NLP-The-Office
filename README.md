@@ -19,5 +19,5 @@ We plan to upload the fine-tuned models to HuggingFace to make them easy accessi
 
 ![the-office-whoa](https://user-images.githubusercontent.com/87521684/226451449-217a1c25-535c-4b3a-9377-8305765eb320.gif)
 
-This project was done in the course of the lecture "Intelligent Text Analysis" at Ravensburg Cooperative State University (DHWB).
+This project was done in the course of the lecture "Intelligent Text Analysis" at Ravensburg Cooperative State University (DHBW).
 The paper we wrote on our results can also be found in this repository.
